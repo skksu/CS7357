@@ -14,8 +14,8 @@ mnist = input_data.read_data_sets("/tmp/data/", one_hot=False)
 
 # Visualize encoder setting
 # Parameters
-learning_rate = 0.01    # 0.01 this learning rate will be better! Tested
-training_epochs = 10
+learning_rate = 0.001    # 0.01 this learning rate will be better! Tested
+training_epochs = 20
 batch_size = 256
 display_step = 1
 
