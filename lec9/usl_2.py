@@ -1,6 +1,3 @@
-# View more python learning tutorial on my Youtube and Youku channel!!!
-
-# My tutorial website: https://mofanpy.com/tutorials/
 
 from __future__ import division, print_function, absolute_import
 
@@ -120,18 +117,9 @@ with tf.Session() as sess:
 
     print("Optimization Finished!")
 
-    # # Applying encode and decode over test set
-    encode_decode = sess.run(
-        y_pred, feed_dict={X: mnist.test.images[:examples_to_show]})
-    # Compare original images with their reconstructions
-    f, a = plt.subplots(2, 10, figsize=(10, 2))
-    for i in range(examples_to_show):
-        a[0][i].imshow(np.reshape(mnist.test.images[i], (28, 28)))
-        a[1][i].imshow(np.reshape(encode_decode[i], (28, 28)))
-    plt.show()
 
-    # encoder_result = sess.run(encoder_op, feed_dict={X: mnist.test.images})
-    # plt.scatter(encoder_result[:, 0], encoder_result[:, 1], c=mnist.test.labels)
-    # plt.colorbar()
-    # plt.show()
+    encoder_result = sess.run(encoder_op, feed_dict={X: mnist.test.images})
+    plt.scatter(encoder_result[:, 0], encoder_result[:, 1], c=mnist.test.labels)
+    plt.colorbar()
+    plt.show()
 
