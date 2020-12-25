@@ -46,6 +46,8 @@ def build_generator():
     return model
 
 generator = build_generator()
+
+
 generator.summary()
 
 
@@ -73,6 +75,8 @@ def build_discriminator():
     return model
   
 discriminator = build_discriminator()
+
+
 discriminator.summary()
 
 
@@ -90,6 +94,8 @@ def build_GAN(discriminator, generator):
     return GAN
 
 GAN = build_GAN(discriminator, generator)
+
+
 GAN.summary()
 
 
@@ -152,6 +158,4 @@ def train_GAN(epochs=1, batch_size=128):
     if i == 1 or i % 10 == 0:
       draw_images(generator, i)
 
-
-      
 train_GAN(epochs=400, batch_size=128)
