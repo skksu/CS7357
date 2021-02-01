@@ -69,7 +69,7 @@ def knn_comparison(data, n_neighbors = 15):
 
 
 
-data = np.genfromtxt('6.overlap.csv', delimiter=',')
+data = np.genfromtxt('1.ushape.csv', delimiter=',')
 knn_comparison(data, 1)
 knn_comparison(data, 5)
 knn_comparison(data,15)
